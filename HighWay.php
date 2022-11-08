@@ -1,6 +1,6 @@
 <?php
 
-require_once './Vehicle.php;';
+require_once './Vehicle.php';
 
 abstract class HighWay
 {
@@ -14,9 +14,9 @@ abstract class HighWay
     {
         return $this->currentVehicles;
     }
-    public function setCurrentVehicles($currentVehicles): self
+    public function setCurrentVehicles(Vehicle $currentVehicles): self
      {
-        $this->currentVehicles = $currentVehicles;
+        $this->currentVehicles[] = $currentVehicles;
 
        return $this;
     }
@@ -24,16 +24,16 @@ abstract class HighWay
     
     
 
-    public function getnbLane(): int 
+    public function getNbLane(): int 
     {
         return $this->nbLane;
     }
-    public function setnbLane($nbLane): self 
+    public function setNbLane($nbLane): self 
     {
         $this->nbLane = $nbLane;
         return $this;
     }
-    public function getmaxSpeed(): int 
+    public function getMaxSpeed(): int 
     { 
         return $this->maxSpeed;
     }

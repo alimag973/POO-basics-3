@@ -12,11 +12,10 @@ final class MotorWay extends HighWay
     {
         if (!($vehicle instanceof Bike) && !($vehicle instanceof SkateBoard))
         {
-            return "Not allowed here <br><br>";
-        }else {
             $this->currentVehicules[] = $vehicle;
             return 'This vehicule is allowed <br><br>';
-        }
+        } 
+        return "Not allowed here <br><br>";
     }
-   
-    }
+}
+    
